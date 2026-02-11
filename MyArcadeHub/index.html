@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Arcade Hub 🎮</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>My Arcade Hub 🎮</h1>
+
+<input type="text" id="search" placeholder="Search games..." onkeyup="searchGames()">
+
+<div class="grid" id="gameGrid">
+  <a href="games/clicker.html" class="card">Clicker Game</a>
+  <a href="games/car.html" class="card">Car Racer</a>
+  <a href="games/shooter.html" class="card">Shooter Game</a>
+  <a href="games/platformer.html" class="card">Platformer</a>
+  <a href="games/dodge.html" class="card">Dodge Game</a>
+  <a href="games/chat.html" class="card">Arcade Chat</a>
+  <a href="games/leaderboard.html" class="card">Leaderboard 🏆</a>
+</div>
+
+<script>
+function searchGames() {
+  let input = document.getElementById("search").value.toLowerCase();
+  document.querySelectorAll(".card").forEach(card => {
+    card.style.display = card.innerText.toLowerCase().includes(input) ? "block" : "none";
+  });
+}
+
+// Hidden taco admin mode
+let keys="";
+document.addEventListener("keydown", e=>{
+  keys+=e.key.toLowerCase();
+  if(keys.includes("taco")){
+    alert("🌮 TACO MODE ACTIVATED 🌮");
+    document.body.style.background="darkred";
+    keys="";
+  }
+});
+</script>
+</body>
+</html>
