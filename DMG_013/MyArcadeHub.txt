@@ -1,0 +1,12 @@
+MyArcadeHub
+│
+├─ index.html
+├─ style.css
+└─ games
+     ├─ clicker.html
+     ├─ dodge.html
+     ├─ reaction.html
+     ├─ car.html
+     ├─ shooter.html
+     ├─ platformer.html
+     └─ chat.html
